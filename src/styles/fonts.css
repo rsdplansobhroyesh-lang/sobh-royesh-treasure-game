@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'IranSans Local';
+  src: local('IRANSans'), local('IranSans'), local('IRANSansWeb');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'IranSans Local';
+  src: local('IRANSans Bold'), local('IRANSans-Bold'), local('IRANSansWeb-Bold');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}

@@ -1,0 +1,26 @@
+.map-treasure.treasure-arriving .landmark-art { filter: drop-shadow(0 5px 8px rgb(13 117 114 / 25%)); animation: treasure-await 850ms ease-in-out infinite alternate; }
+.map-treasure.treasure-arriving .checkpoint-label { color: var(--color-primary); }
+.map-treasure.treasure-available .landmark-art { filter: drop-shadow(0 5px 7px rgb(214 175 74 / 45%)); animation: treasure-ready 1.6s ease-in-out infinite; }
+.map-treasure.treasure-available::before { content: ''; position: absolute; inset: 10% 7% 22%; z-index: -1; border-radius: 50%; background: rgb(255 222 116 / 25%); filter: blur(10px); animation: treasure-glow 1.6s ease-in-out infinite alternate; }
+.final-celebration { position: relative; isolation: isolate; max-inline-size: 38rem; margin-inline: auto; padding: var(--space-6) var(--space-4); overflow: hidden; border: 1px solid #d9c998; border-radius: var(--radius-medium); background: radial-gradient(circle at 50% 28%, #fff8d9 0 18%, #fffdf5 48%, #eef6eb 100%); box-shadow: var(--shadow-soft); text-align: center; }
+.final-open-chest { inline-size: min(11rem, 46vw); margin: var(--space-2) auto; filter: drop-shadow(0 15px 14px rgb(60 70 43 / 18%)); animation: final-chest-open 700ms cubic-bezier(.2,.9,.25,1.25) both; }
+.final-open-chest .landmark-art { display: block; inline-size: 100%; block-size: auto; transform: scale(1.18); }
+.final-open-chest .treasure-lid { transform-box: fill-box; transform-origin: 45% 100%; animation: final-lid-open 700ms 240ms cubic-bezier(.2,.85,.25,1.15) both; }
+.final-celebration h1 { color: var(--color-primary-strong); font-size: clamp(2rem, 9vw, 3.2rem); }
+.final-message { max-inline-size: 31rem; margin: var(--space-4) auto 0; color: #485f57; font-size: clamp(.9rem, 3.8vw, 1rem); line-height: 2; text-align: start; }
+.final-message p + p { margin-block-start: .7rem; }
+.final-message strong { color: var(--color-primary-strong); font-weight: 800; }
+.final-message .final-emphasis { margin-block-start: var(--space-4); padding: .65rem var(--space-3); border-inline-start: 4px solid #e2b450; border-radius: var(--radius-small); color: var(--color-primary-strong); background: rgb(255 246 207 / 70%); font-size: clamp(1.15rem, 5vw, 1.4rem); font-weight: 850; line-height: 1.8; text-align: center; }
+.final-celebration .screen-actions { position: relative; z-index: 2; justify-content: center; }
+.treasure-particles { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.treasure-particles span { position: absolute; inline-size: .45rem; block-size: .45rem; border-radius: 50% 0 50% 50%; background: #e2b450; animation: final-sparkle 2.4s ease-in-out infinite; }
+.treasure-particles span:nth-child(3n + 2) { background: #5cac8f; }
+.treasure-particles span:nth-child(3n) { background: #df7c65; }
+.treasure-particles span:nth-child(1) { inset: 14% auto auto 10%; }.treasure-particles span:nth-child(2) { inset: 26% 13% auto auto; animation-delay: -.4s; }.treasure-particles span:nth-child(3) { inset: 48% auto auto 8%; animation-delay: -.8s; }.treasure-particles span:nth-child(4) { inset: 58% 9% auto auto; animation-delay: -1.2s; }.treasure-particles span:nth-child(5) { inset: 8% 32% auto auto; animation-delay: -.7s; }.treasure-particles span:nth-child(6) { inset: 70% auto auto 20%; animation-delay: -1.5s; }.treasure-particles span:nth-child(7) { inset: 17% auto auto 30%; animation-delay: -1.8s; }.treasure-particles span:nth-child(8) { inset: 40% 5% auto auto; animation-delay: -2s; }.treasure-particles span:nth-child(9) { inset: 64% 25% auto auto; animation-delay: -.25s; }.treasure-particles span:nth-child(10) { inset: 36% auto auto 18%; animation-delay: -1s; }.treasure-particles span:nth-child(11) { inset: 76% 15% auto auto; animation-delay: -1.35s; }.treasure-particles span:nth-child(12) { inset: 7% auto auto 46%; animation-delay: -1.7s; }
+@keyframes treasure-await { to { transform: translateY(-3px); } }
+@keyframes treasure-ready { 50% { transform: translateY(-4px) scale(1.025); } }
+@keyframes treasure-glow { to { opacity: .45; transform: scale(1.15); } }
+@keyframes final-chest-open { from { opacity: 0; transform: translateY(24px) scale(.72); } 60% { transform: translateY(-5px) scale(1.08); } }
+@keyframes final-lid-open { from { transform: none; } to { transform: translate(-4px, -17px) rotate(-8deg); } }
+@keyframes final-sparkle { 0%,100% { opacity: .2; transform: translateY(8px) rotate(0); } 50% { opacity: 1; transform: translateY(-8px) rotate(145deg) scale(1.3); } }
+@media (min-width: 48rem) { .final-celebration { padding: var(--space-7); } .final-open-chest { inline-size: 13rem; } .final-message { font-size: 1rem; } .final-celebration .screen-actions { flex-direction: row; } }
