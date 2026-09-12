@@ -1,0 +1,13 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+playwright-report.zip
+artifacts/
+preview.log
+preview-error.log
+.env
+.env.*
+*.local
+*.tsbuildinfo
+.DS_Store
